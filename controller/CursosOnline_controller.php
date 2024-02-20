@@ -70,7 +70,7 @@ class CursosOnline_controller extends CRUD
          *
          * @access public
          * @param array $data data a guardar en la base de datos
-         * @return true o false
+         * @return array
          */
         $error = 0;
         $response = '';

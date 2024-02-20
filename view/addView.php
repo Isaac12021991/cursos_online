@@ -19,8 +19,7 @@ if (isset($_GET["nb_cursos_online"]))
 {
 
   $responseData = $CursosOnline_controller->add($_GET);
-
-  if ($responseData->error == 0){
+  if ($responseData["error"] == 0){
     header("Location: ../index.php");
     exit();
   }
@@ -80,11 +79,11 @@ if (isset($_GET["nb_cursos_online"]))
     <div class="container">
         <div class="row">
         <div class="col-12 d-flex flex-wrap justify-content-center mb-4"> 
-          <?php if (isset($responseData)) { echo $responseData->response; }  ?>
+          <?php if (isset($responseData)) { echo $responseData['response']; }  ?>
         </div>
         
-          <div class="col-4"> </div>
-            <div class="col-4">
+          <div class="col-12 col-lg-4"> </div>
+            <div class="col-12 col-lg-4">
 
                 <form action="./addView.php" method="get">
                 <div class="mb-3">
@@ -117,7 +116,7 @@ if (isset($_GET["nb_cursos_online"]))
                 <button type="submit" class="btn btn-primary">Guardar</button>
               </form>
             </div>
-            <div class="col-4"> </div>
+            <div class="col-12 col-lg-4"> </div>
 
         </div>
     </div>

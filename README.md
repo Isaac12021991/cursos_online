@@ -1,6 +1,6 @@
 # Startup de cursos online de idiomas
 
-_Pequeña aplicacion que tiene simples estructuras de php para la demostracion del manejo de autoload, namespaces, documentación de código y demas funcionalidades - Prueba técnica de Alpha Technologies - Gustavo Quero_
+_Pequeña aplicacion que tiene simples estructuras de php para la demostracion del manejo de autoload, namespaces, documentación de código y demas funcionalidades - Ejemplo en funcionamiento en http://cursosonline.isaacf7b.com- Prueba técnica de Alpha Technologies - Gustavo Quero_
 
 ### Pre-requisitos 📋
 

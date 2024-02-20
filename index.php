@@ -83,7 +83,7 @@ if (isset($_GET["eliminar"])) {
                <thead>
                   <tr>
                      <th width="10%">#</th>
-                     <th width="30%">Tipo de clase</th>
+                     <th width="30%">Tipo</th>
                      <th width="30%">Nombre</th>
                      <th width="30%">Detalle</th>
                      <th width="1%"></th>
@@ -106,7 +106,7 @@ if (isset($_GET["eliminar"])) {
                 
               <form action="./index.php" method="get">
                   <input value="<?php echo $key->id; ?>" name="eliminar" type="hidden">
-                  <button class="btn btn-danger" type="submit">Eliminar</button>
+                  <button class="btn btn-danger btn-sm" type="submit">X</button>
               </form>
 
               </td>
