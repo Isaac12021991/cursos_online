@@ -99,7 +99,7 @@ if (isset($_GET["eliminar"])) {
 
               <td>
                 <?php if($key->co_tipo_clase == 1){ echo $key->ca_puntaje.'/5'; }; ?> 
-                <?php if($key->co_tipo_clase == 2){ echo $key->nb_tipo_clase; }; ?> 
+                <?php if($key->co_tipo_clase == 2){ echo $key->nb_tipo_evaluacion; }; ?> 
               </td>
 
               <td> 
