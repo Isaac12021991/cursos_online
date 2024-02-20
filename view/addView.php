@@ -47,7 +47,7 @@ if (isset($_GET["nb_cursos_online"]))
             <a href="../" class="text-white text-decoration-none me-4 mt-2">Inicio</a>
 
               <form class="navbar-search d-flex start-20" action="../" method="get">
-                  <input class="form-control me-2" name="search" type="text" placeholder="Search" aria-label="Search">
+                  <input class="form-control me-2" name="search" type="text" placeholder="Buscar" aria-label="Buscar">
                   <button class="btn btn-primary" type="submit">Buscar</button>
               </form>
 

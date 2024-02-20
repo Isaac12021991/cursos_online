@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 20-02-2024 a las 18:25:12
+-- Tiempo de generación: 20-02-2024 a las 21:50:01
 -- Versión del servidor: 10.4.27-MariaDB
 -- Versión de PHP: 8.0.25
 
@@ -41,9 +41,9 @@ CREATE TABLE `j001t_cursos_online` (
 --
 
 INSERT INTO `j001t_cursos_online` (`id`, `nb_cursos_online`, `ca_puntaje`, `ff_creacion`, `ff_modificacion`, `in_activo`) VALUES
-(1, 'Vocabulario sobre Trabajo en Inglés', 5, '2024-02-20 13:22:28', NULL, 1),
-(2, ' Conversaciones de Trabajo en Inglés', 5, '2024-02-20 13:22:44', NULL, 1),
-(3, 'Trabajos y ocupaciones en Inglés', 1, '2024-02-20 13:23:04', NULL, 1);
+(1, 'Vocabulario sobre Trabajo en Inglés', 5, '2024-02-20 16:47:52', NULL, 1),
+(2, 'Conversaciones de Trabajo en Inglés', 5, '2024-02-20 16:48:13', NULL, 1),
+(3, 'Trabajos y ocupaciones en Inglés', 1, '2024-02-20 16:48:38', NULL, 1);
 
 -- --------------------------------------------------------
 
@@ -66,9 +66,9 @@ CREATE TABLE `j002t_cursos_online_detalle` (
 --
 
 INSERT INTO `j002t_cursos_online_detalle` (`id`, `co_cursos_online`, `co_tipo_clase`, `co_tipo_evaluacion`, `ff_creacion`, `ff_modificacion`, `in_activo`) VALUES
-(1, 1, 1, 1, '2024-02-20 13:22:28', '2024-02-20 13:22:28', 1),
-(2, 2, 1, 1, '2024-02-20 13:22:44', '2024-02-20 13:22:44', 1),
-(3, 3, 2, 1, '2024-02-20 13:23:04', '2024-02-20 13:23:04', 1);
+(1, 1, 1, 1, '2024-02-20 16:47:52', '2024-02-20 16:47:52', 1),
+(2, 2, 1, 1, '2024-02-20 16:48:13', '2024-02-20 16:48:13', 1),
+(3, 3, 2, 1, '2024-02-20 16:48:38', '2024-02-20 16:48:38', 1);
 
 -- --------------------------------------------------------
 
@@ -129,7 +129,10 @@ ALTER TABLE `j001t_cursos_online`
 -- Indices de la tabla `j002t_cursos_online_detalle`
 --
 ALTER TABLE `j002t_cursos_online_detalle`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `Llave foranea principal` (`co_cursos_online`),
+  ADD KEY `Llave foranea evaluacion` (`co_tipo_evaluacion`),
+  ADD KEY `Llave foranea clase` (`co_tipo_clase`);
 
 --
 -- Indices de la tabla `j003t_tipo_evaluacion`
@@ -170,6 +173,18 @@ ALTER TABLE `j003t_tipo_evaluacion`
 --
 ALTER TABLE `j004t_tipo_clase`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- Restricciones para tablas volcadas
+--
+
+--
+-- Filtros para la tabla `j002t_cursos_online_detalle`
+--
+ALTER TABLE `j002t_cursos_online_detalle`
+  ADD CONSTRAINT `Llave foranea clase` FOREIGN KEY (`co_tipo_clase`) REFERENCES `j004t_tipo_clase` (`id`),
+  ADD CONSTRAINT `Llave foranea evaluacion` FOREIGN KEY (`co_tipo_evaluacion`) REFERENCES `j003t_tipo_evaluacion` (`id`),
+  ADD CONSTRAINT `Llave foranea principal` FOREIGN KEY (`co_cursos_online`) REFERENCES `j001t_cursos_online` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

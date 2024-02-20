@@ -13,11 +13,11 @@ Luego ejecutar el sql cursos_online.sql que esta dentro de la carpeta SQL
 
 ### Proceso de pruebas 🔧
 
-_Ingrese al sistema y realice una busque de un curso o examen, agregue o elimine un registro para verificar la funcionalidad_
+_Ingrese al sistema y realice una busqueda de un curso o examen, agregue o elimine un registro para verificar la funcionalidad_
 
 ## Autores ✒️
 
-* **Isaac Betancourt** - *Creador de pequeña apliacion* - [isaacf7b.com](https://github.com/Isaac12021991)
+* **Isaac Betancourt** - *Creador de pequeña aplciacion* - [isaacf7b.com](https://github.com/Isaac12021991)
 
 ## Agradecimiento
 
