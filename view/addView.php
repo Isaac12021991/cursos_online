@@ -44,11 +44,11 @@ if (isset($_GET["nb_cursos_online"]))
 
             <div class="d-flex align-items-start  my-2 my-lg-0 me-lg-auto">
 
-            <a href="../" class="text-white text-decoration-none me-4 mt-2">Home</a>
+            <a href="../" class="text-white text-decoration-none me-4 mt-2">Inicio</a>
 
               <form class="navbar-search d-flex start-20" action="../" method="get">
                   <input class="form-control me-2" name="search" type="text" placeholder="Search" aria-label="Search">
-                  <button class="btn btn-primary" type="submit">Search</button>
+                  <button class="btn btn-primary" type="submit">Buscar</button>
               </form>
 
             </div>
